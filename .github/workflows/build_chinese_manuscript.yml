@@ -1,0 +1,49 @@
+name: Build Chinese SCI manuscript
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'generated/**'
+      - '.github/workflows/build_chinese_manuscript.yml'
+      - 'Figure_*/**'
+      - 'composite_figures/**'
+      - '00_run_all.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-docx:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install numpy pandas matplotlib python-docx pillow
+
+      - name: Reproduce manuscript figures
+        run: python 00_run_all.py
+
+      - name: Build Chinese Word manuscript
+        run: python generated/build_chinese_manuscript.py
+
+      - name: Upload Word manuscript and figures
+        uses: actions/upload-artifact@v4
+        with:
+          name: Chinese-SCI-manuscript
+          path: |
+            generated/*.docx
+            composite_figures/Figure_*.png
+            Figure_06_20d_unlabeled_trend/Figure_06_20d_unlabeled_trend.png
+          if-no-files-found: error
+          retention-days: 30
