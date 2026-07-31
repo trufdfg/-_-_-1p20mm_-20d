@@ -1,14 +1,8 @@
 name: Build Chinese SCI manuscript
 
 on:
-  pull_request:
-    branches: [main]
-    paths:
-      - 'generated/**'
-      - '.github/workflows/build_chinese_manuscript.yml'
-      - 'Figure_*/**'
-      - 'composite_figures/**'
-      - '00_run_all.py'
+  push:
+    branches: [chatgpt-zh-manuscript]
   workflow_dispatch:
 
 permissions:
