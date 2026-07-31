@@ -3,6 +3,8 @@ name: Build Chinese SCI manuscript
 on:
   push:
     branches: [chatgpt-zh-manuscript]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
