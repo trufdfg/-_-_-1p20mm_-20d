@@ -1,0 +1,19 @@
+﻿file,rows,columns,column_names
+Figure_01_workflow/data.csv,6,7,x; y; w; h; title; subtitle; color
+Figure_02/fig2a_time_domain/data.csv,6005,3,kf_mgkg; time_ps; amplitude_au
+Figure_02/fig2b_frequency_domain/data.csv,3005,3,kf_mgkg; frequency_thz; amplitude_db
+Figure_02/fig2c_dielectric_spectra/data.csv,1505,3,kf_mgkg; frequency_thz; eps_real
+Figure_02/fig2d_sensitive_frequency_fit/data.csv,5,2,kf_mgkg; eps_real_1p9418
+Figure_02/fig2e_sample_unit_distribution/data.csv,23,8,unit_id; day; kf_mgkg; eps_real_1p94_mean; eps_real_1p94_sd; n_scans; cell_thickness; source_file
+Figure_03/fig3a_pca_band_screening/data.csv,6,2,candidate_band; composite_score
+Figure_03/fig3b_xgboost_mapping/data.csv,158,3,kf_mgkg; mapped_moisture_mgkg; residual_mgkg
+Figure_03/fig3c_residual_distribution/data.csv,158,1,residual_mgkg
+Figure_03/fig3d_feature_importance/data.csv,6,2,feature; importance
+Figure_04/fig4a_field_mapping/data.csv,6,8,sample; side; kf_mgkg; mapped_mgkg; mapped_sd; error_mgkg; abs_error_mgkg; relative_error_percent
+Figure_04/fig4b_bland_altman/data.csv,6,8,sample; side; kf_mgkg; mapped_mgkg; mapped_sd; error_mgkg; abs_error_mgkg; relative_error_percent
+Figure_04/fig4c_absolute_error/data.csv,6,8,sample; side; kf_mgkg; mapped_mgkg; mapped_sd; error_mgkg; abs_error_mgkg; relative_error_percent
+Figure_04/fig4d_relative_error_by_side/data.csv,6,8,sample; side; kf_mgkg; mapped_mgkg; mapped_sd; error_mgkg; abs_error_mgkg; relative_error_percent
+Figure_05/fig5a_data_structure/data.csv,5,3,kf_mgkg; sampling_units; scan_records
+Figure_05/fig5b_within_level_cv/data.csv,5,2,kf_mgkg; within_level_cv_percent
+Figure_05/fig5c_holdout_rmse/data.csv,5,3,held_out_kf_mgkg; holdout_rmse_mgkg; type
+Figure_05/fig5d_field_relative_error/data.csv,6,2,sample; relative_error_percent

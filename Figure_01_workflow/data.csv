@@ -1,0 +1,7 @@
+﻿x,y,w,h,title,subtitle,color
+0.05,0.62,0.28,0.22,KF reference,75-113 mg kg^-1,blue
+0.38,0.62,0.28,0.22,THz-TDS,time and frequency spectra,gray
+0.71,0.62,0.28,0.22,Optical constants,epsilon' and absorption,green
+0.71,0.22,0.28,0.22,Band screening,PCA frequency windows,purple
+0.38,0.22,0.28,0.22,Sample-level summary,boundary check,orange
+0.05,0.22,0.28,0.22,Applicability,6 field-aged samples,red
